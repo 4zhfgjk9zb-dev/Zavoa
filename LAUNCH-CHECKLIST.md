@@ -14,8 +14,8 @@
 - [x] HTTPS-/Security-Header-Vorbereitung für Netlify
 
 ## Vor öffentlichem Launch
-- [ ] echte Betreiberangaben in Impressum eintragen
-- [ ] echte geschäftliche E-Mail eintragen
+- [x] Betreiberangaben in Impressum eingetragen
+- [ ] kontakt@zavoa.de tatsächlich einrichten und testen
 - [ ] finalen Datenschutz an Hosting/Affiliate/Newsletter anpassen
 - [ ] Hosting veröffentlichen
 - [ ] zavoa.de mit Hosting verbinden

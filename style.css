@@ -1,0 +1,68 @@
+
+:root{
+ --bg:#F6F8FA;--card:#FFFFFF;--ink:#0B1B31;--muted:#687684;
+ --green:#16B968;--green2:#0FAF61;--blue:#0877F9;--teal:#08B5C8;
+ --dark:#0A1930;--line:#DFE6EA;--soft:#EAF8F1;
+ --orange:#FFF1E8;--orangeText:#B95A2E;--red:#D94C45;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:auto;padding:0 20px}
+.topnote{background:var(--dark);color:#d8eee4;text-align:center;font-size:12px;padding:8px 14px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.nav{min-height:72px;display:flex;align-items:center;gap:22px}
+.logo{font-size:25px;font-weight:950;color:var(--green);letter-spacing:-.6px}.logo span{color:var(--green2)}
+.navlinks{display:flex;gap:18px;font-size:14px;font-weight:750;color:#405048}
+.navlinks a:hover{color:var(--green)}
+.navspacer{flex:1}
+.navcta{background:var(--green);color:white;padding:10px 14px;border-radius:11px;font-weight:850;font-size:14px}
+.hero{padding:42px 0 24px}
+.heroGrid{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;background:linear-gradient(125deg,#063d2a,#087a4b);border-radius:25px;padding:38px;color:#fff;overflow:hidden}
+.eyebrow{text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.9px;color:#a9e4c7}
+h1{font-size:48px;line-height:1.03;letter-spacing:-1.6px;margin:8px 0 13px;max-width:760px}
+.hero p{font-size:17px;line-height:1.55;color:#d9eee4;max-width:740px}
+.heroButtons{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:11px;font-weight:850;border:0;cursor:pointer;font:inherit}
+.btnWhite{background:white;color:var(--dark)}.btnGhost{background:#ffffff13;color:#fff;border:1px solid #ffffff28}.btnGreen{background:var(--green);color:#fff}.btnDark{background:#17221d;color:#fff}
+.heroStats{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:center}
+.stat{background:#ffffff12;border:1px solid #ffffff22;border-radius:15px;padding:17px}.stat b{display:block;font-size:28px}.stat span{font-size:12px;color:#cce8db}
+.trustrow{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:12px;color:#d9eee4}
+.section{padding:34px 0}.sectionHead{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:14px}
+.sectionHead h2{font-size:28px;margin:0;letter-spacing:-.6px}.sectionHead p{margin:5px 0 0;color:var(--muted);font-size:14px}
+.searchbar{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;display:grid;grid-template-columns:1fr auto;gap:8px;box-shadow:0 8px 25px #1036230a}
+.searchbar input{border:0;outline:0;font:inherit;padding:10px;background:transparent}.searchbar button{border:0;background:var(--green);color:#fff;border-radius:10px;padding:0 18px;font-weight:850}
+.chips{display:flex;gap:8px;overflow:auto;padding:13px 0 3px}.chip{white-space:nowrap;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:12px;font-weight:750}
+.dealgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.deal{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;display:flex;flex-direction:column;gap:12px;box-shadow:0 7px 20px #10362309}
+.dealtop{display:flex;justify-content:space-between;gap:10px}.merchant{font-size:12px;font-weight:850;color:#5f6d66}.badge{font-size:11px;padding:6px 9px;border-radius:999px;background:var(--soft);color:var(--green);font-weight:900}.badge.hot{background:var(--orange);color:var(--orangeText)}
+.deal h3{font-size:19px;line-height:1.25;margin:0}.desc{font-size:13px;color:var(--muted);line-height:1.45;min-height:38px}
+.priceRow{display:flex;justify-content:space-between;align-items:end;gap:10px}.price{font-size:29px;font-weight:950}.compare{font-size:11px;text-align:right;color:var(--muted)}.saving{color:var(--green);font-size:12px;font-weight:850}
+.scorebox{background:#f7faf8;border-radius:11px;padding:10px}.scoretop{display:flex;justify-content:space-between;font-size:12px;font-weight:850}.bar{height:7px;background:#dfe9e4;border-radius:10px;margin-top:7px;overflow:hidden}.fill{height:100%;background:var(--green2)}
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:7px}.proof div{border:1px solid #edf1ef;background:#fbfcfb;padding:8px;border-radius:9px;font-size:11px;color:#59665f}.proof b{display:block;color:var(--ink);margin-top:2px}
+.actions{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:auto}.actions button{border:0;border-radius:10px;padding:12px;font-weight:850}.go{background:var(--green);color:#fff}.bell{background:#edf4f0}
+.adnote{font-size:10px;color:#8a948f;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}.stepnum{width:38px;height:38px;border-radius:11px;background:var(--soft);color:var(--green);display:grid;place-items:center;font-weight:950}.step h3{margin:14px 0 7px}.step p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.panel h3{margin-top:0}.panel p{color:var(--muted);line-height:1.6;font-size:14px}.checklist{display:grid;gap:9px;margin-top:16px}.check{display:flex;gap:9px;font-size:14px}.check b{color:var(--green)}
+.alertbox{background:linear-gradient(120deg,#eef9f3,#e8f3ee);border:1px solid #d6e9df;border-radius:20px;padding:24px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}.alertbox h2{margin:0 0 7px}.alertbox p{margin:0;color:var(--muted);font-size:14px}.alertform{display:flex;gap:8px}.alertform input{flex:1;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit}.alertform button{border:0;border-radius:10px;background:#17221d;color:#fff;padding:12px 14px;font-weight:850}
+.legal{max-width:860px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}.legal h1{font-size:36px;color:var(--ink)}.legal h2{font-size:20px;margin-top:28px}.legal p,.legal li{color:#56635d;line-height:1.65;font-size:14px}.placeholder{background:#fff8df;border:1px solid #f0df9c;padding:12px;border-radius:10px;color:#7a6425;font-size:13px}
+footer{margin-top:40px;background:#11241b;color:#d8e5df;padding:34px 0}.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:24px}.footgrid p{color:#9fb5aa;font-size:13px;line-height:1.5}.footlinks{display:grid;gap:8px;font-size:13px}.foothead{font-weight:850;margin-bottom:10px}.copyright{border-top:1px solid #ffffff14;margin-top:28px;padding-top:18px;color:#8fa59a;font-size:11px}
+.pagehero{padding:38px 0 18px}.pagehero h1{color:var(--ink);font-size:42px}.pagehero p{color:var(--muted);max-width:720px;font-size:16px;line-height:1.6}
+.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.form{display:grid;gap:10px}.form input,.form textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;background:#fff}.form textarea{min-height:150px;resize:vertical}
+@media(max-width:900px){.heroGrid,.alertbox,.split,.contactgrid{grid-template-columns:1fr}.dealgrid,.steps{grid-template-columns:1fr 1fr}.heroStats{grid-template-columns:repeat(4,1fr)}.navlinks{display:none}}
+@media(max-width:620px){h1{font-size:35px}.heroGrid{padding:24px}.heroStats{grid-template-columns:1fr 1fr}.dealgrid,.steps{grid-template-columns:1fr}.navcta{font-size:12px;padding:9px 10px}.sectionHead{align-items:flex-start;flex-direction:column}.alertform{flex-direction:column}.footgrid{grid-template-columns:1fr}.pagehero h1{font-size:34px}}
+
+
+@media(max-width:620px){.logo img{width:140px}}
+.emailonly{font-size:11px;color:#607069;margin-top:7px}
+
+/* ZAVOA Brand */
+.logo{display:inline-flex;align-items:center;min-width:152px}
+.logo img{display:block;width:178px;height:auto}
+.navcta,.btnGreen,.go,.searchbar button{background:var(--green)}
+.topnote{background:var(--dark)}
+.heroGrid{background:linear-gradient(125deg,var(--dark),#064E5E 58%,#0A7A63)}
+.badge.hot{background:#FFF0EB;color:#C1492F}
+.scorebox .fill,.bar .fill{background:linear-gradient(90deg,var(--blue),var(--teal),var(--green))}
+.emailonly{font-size:11px;color:#607069;margin-top:5px}
+@media(max-width:620px){.logo img{width:142px}}

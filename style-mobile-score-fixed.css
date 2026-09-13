@@ -1,0 +1,192 @@
+
+:root{--n:#071a33;--g:#12b76a;--m:#607487;--l:#dfe8ec;--bg:#f6fafc}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--n)}a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}.nav{height:76px;display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--l)}
+.brand{text-decoration:none}.brand b{font-size:32px;color:var(--g);letter-spacing:-2px}.brand small{display:block;font-size:9px;color:var(--m)}
+.links{display:flex;gap:26px;font-weight:700;font-size:14px}.links a{text-decoration:none}.grow{flex:1}.btn{display:inline-block;padding:13px 18px;border-radius:11px;text-decoration:none;font-weight:800;border:0}.green{background:var(--g);color:#fff}.outline{border:1px solid var(--g);color:#087c4d}
+.hero{background:linear-gradient(110deg,#f5faff,#fff 55%,#eaf9f2);padding:58px 0}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+.kicker{font-size:12px;letter-spacing:1.8px;font-weight:900;color:#60788a;text-transform:uppercase}.hero h1{font-size:58px;line-height:1;letter-spacing:-2px;margin:12px 0 18px}.hero p{font-size:18px;line-height:1.5;color:#526779}
+.actions{display:flex;gap:10px;margin:25px 0}.checks{display:grid;gap:10px;color:#526779}.checks span:before{content:"✓";color:var(--g);font-weight:900;margin-right:8px}
+.visual{min-height:300px;border-radius:40px;background:radial-gradient(circle,#d8f7e8,transparent 68%);display:grid;place-items:center}.visualBox{background:#fff;border:1px solid var(--l);border-radius:20px;padding:28px;width:75%;box-shadow:0 15px 40px #10203015}.visualBox strong{font-size:25px}.visualBox .score{font-size:50px;color:var(--g);font-weight:900;margin:12px 0}
+.section{padding:48px 0}.head{display:flex;justify-content:space-between;align-items:end}.head h2{font-size:33px;margin:5px 0}.muted{color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}.card{border:1px solid var(--l);border-radius:17px;padding:15px}.pic{height:160px;border-radius:12px;background:#f3f6f7;display:grid;place-items:center;font-size:75px}.badge{display:inline-block;background:#dff7eb;color:#087c4d;padding:6px 8px;border-radius:999px;font-size:11px;font-weight:900;margin-top:12px}.card h3{margin:10px 0 6px}.price{font-size:27px;font-weight:900;color:var(--g)}.card .btn{width:100%;text-align:center;margin-top:12px}
+.coupons{background:#eefaf5}.couponGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.coupon{background:#fff;border:1px solid var(--l);border-radius:15px;padding:18px}.coupon h3{margin:0}.coupon strong{font-size:24px;display:block;margin:12px 0}.demo{font-size:11px;color:#8a651e;background:#fff6dd;padding:7px;border-radius:7px}
+.alert{background:var(--n);color:#fff;border-radius:19px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.alert h2{margin:0 0 8px}.form{display:flex;gap:8px}.form input{flex:1;padding:13px;border-radius:10px;border:0}
+.pagehero{background:var(--bg);padding:45px 0}.pagehero h1{font-size:45px;margin:0}.content{max-width:900px;margin:30px auto;padding:0 24px;line-height:1.6}
+footer{border-top:1px solid var(--l);padding:35px 0}.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footnav{display:grid;gap:8px}.footnav a{text-decoration:none}.copy{font-size:11px;color:#71818d;margin-top:28px}
+@media(max-width:850px){.links{display:none}.heroGrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.couponGrid,.alert{grid-template-columns:1fr}}
+
+
+/* Controlled Design Update 1 — no structural/deployment changes */
+.visualBox{position:relative;overflow:hidden}
+.visualBox:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-45px;top:-45px;background:#e2f8ed}
+.visualBox strong,.visualBox .score,.visualBox .muted{position:relative;z-index:1}
+.card{transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #0b263815}
+.pic{font-family:"Apple Color Emoji","Segoe UI Emoji",sans-serif;background:linear-gradient(145deg,#f2f6f7,#fff);border:1px solid #edf1f2}
+.coupon{position:relative}.coupon:after{content:"Code anzeigen";display:block;margin-top:14px;padding:10px 12px;border-radius:9px;background:#12b76a;color:#fff;font-size:12px;font-weight:900;text-align:center}
+.alert{box-shadow:0 10px 28px #071a3315}
+
+.score-label{font-size:17px;font-weight:900;color:#087c4d;margin:-4px 0 10px}
+.score-scale{display:flex;justify-content:space-between;font-size:10px;color:#71818d;margin-top:18px}
+.score-bar{height:8px;background:#e5ecef;border-radius:99px;overflow:hidden;margin:4px 0 14px}
+.score-bar i{display:block;width:92%;height:100%;background:#12b76a;border-radius:99px}
+.score-link{font-size:13px;font-weight:800;color:#087c4d;text-decoration:none}
+
+
+/* =========================================================
+   ZAVOA – Mobile Optimierung
+   Nur für Smartphones bis 520px.
+   Desktop- und Tablet-Darstellung bleiben unverändert.
+   ========================================================= */
+
+
+/* =========================================================
+   ZAVOA – Mobile Fix 3
+   HTML + CSS abgestimmt. Desktop bleibt unverändert.
+   ========================================================= */
+.mobileScore{display:none}
+
+
+/* ZAVOA Mobile – ein einziger sauberer Smartphone-Block */
+
+
+/* ZAVOA Mobile – robuste Portrait-Version */
+@media(max-width:520px){
+  .wrap{padding:0 18px}
+  .nav{height:70px;gap:14px}
+  .brand b{font-size:30px}
+  .brand small{font-size:8px}
+  .nav>.btn{padding:11px 14px;font-size:14px}
+  .links{display:none}
+
+  .hero{padding:34px 0 30px}
+  .heroGrid{display:block}
+  .hero h1{font-size:39px;line-height:.98;letter-spacing:-1.4px;margin:10px 0 14px}
+  .hero p{font-size:16px;line-height:1.42;margin:0}
+  .actions{display:flex;flex-direction:column;gap:9px;margin:18px 0 16px}
+  .actions .btn{width:100%;text-align:center;padding:13px 15px}
+  .checks{gap:6px;font-size:15px}
+
+  /* WICHTIG: dieselbe vorhandene Score-Karte wie auf Desktop benutzen */
+  .hero .visual{
+    display:block !important;
+    min-height:0 !important;
+    margin-top:16px !important;
+    padding:0 !important;
+    background:none !important;
+    border-radius:0 !important;
+  }
+
+  .hero .visualBox{
+    display:block !important;
+    width:100% !important;
+    padding:14px 15px !important;
+    border-radius:14px !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .hero .visualBox:after{display:none !important}
+
+  .hero .visualBox strong{
+    display:block !important;
+    font-size:13px !important;
+    margin-bottom:3px !important;
+  }
+
+  .hero .visualBox .score{
+    display:inline-block !important;
+    font-size:25px !important;
+    line-height:1 !important;
+    margin:2px 7px 4px 0 !important;
+  }
+
+  .hero .score-label{
+    display:inline-block !important;
+    font-size:12px !important;
+    margin:0 !important;
+    color:#087c4d !important;
+  }
+
+  .hero .visualBox .muted{
+    display:block !important;
+    font-size:11px !important;
+    line-height:1.35 !important;
+    margin:5px 0 0 !important;
+  }
+
+  /* Skala auf Portrait-Handy sichtbar */
+  .hero .score-scale{
+    display:flex !important;
+    justify-content:space-between !important;
+    margin-top:11px !important;
+    font-size:9px !important;
+    color:#71818d !important;
+  }
+
+  .hero .score-bar{
+    display:block !important;
+    height:7px !important;
+    margin:4px 0 8px !important;
+    border-radius:99px !important;
+    background:#e5ecef !important;
+    overflow:hidden !important;
+  }
+
+  .hero .score-bar i{
+    display:block !important;
+    width:92% !important;
+    height:100% !important;
+    background:var(--g) !important;
+    border-radius:99px !important;
+  }
+
+  .hero .score-link{
+    display:inline-block !important;
+    margin-top:1px !important;
+    font-size:10.5px !important;
+  }
+
+  /* Falls mobileScore aus einer früheren Version vorhanden ist: ausblenden,
+     damit nichts doppelt erscheint. */
+  .mobileScore{display:none !important}
+
+  .section{padding:34px 0}
+  .head{display:block !important}
+  .head h2{font-size:30px;line-height:1.05;margin:4px 0 6px}
+  .head .sectionMore,
+  .head>a{
+    display:block !important;
+    width:max-content !important;
+    margin:9px 0 0 !important;
+    float:none !important;
+    position:static !important;
+    font-size:14px !important;
+  }
+
+  .grid{grid-template-columns:1fr !important;gap:12px !important;margin-top:16px}
+  .card{padding:11px !important}
+  .pic{height:108px !important;font-size:48px !important}
+  .badge{margin-top:7px !important;font-size:10px !important}
+  .card h3{font-size:20px !important;margin:6px 0 2px !important}
+  .card .muted{font-size:14px !important}
+  .price{font-size:25px !important}
+  .card .btn{margin-top:7px !important;padding:11px 13px !important}
+
+  .couponGrid{grid-template-columns:1fr !important;gap:11px !important;margin-top:15px}
+  .coupon{padding:13px !important}
+  .coupon h3{font-size:19px !important}
+  .coupon strong{font-size:21px !important;margin:6px 0 !important}
+  .coupon:after{margin-top:7px !important;padding:9px 11px !important}
+
+  .alert{grid-template-columns:1fr !important;padding:20px 16px !important;gap:14px !important}
+  .alert h2{font-size:26px !important;line-height:1.08 !important}
+  .form{flex-direction:column !important;gap:8px !important}
+  .form input,.form .btn{min-height:46px !important}
+
+  footer{padding:26px 0 !important}
+  .foot{display:grid !important;grid-template-columns:1fr 1fr !important;gap:18px 14px !important}
+  .foot>div:first-child{grid-column:1/-1 !important}
+  .footnav{gap:6px !important;font-size:14px !important}
+  .copy{margin-top:16px !important;font-size:10px !important}
+}

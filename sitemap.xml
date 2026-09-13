@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zavoa.de/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://zavoa.de/deals.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://zavoa.de/so-funktionierts.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://zavoa.de/ueber-uns.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://zavoa.de/kontakt.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://zavoa.de/impressum.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://zavoa.de/datenschutz.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://zavoa.de/transparenz.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-</urlset>
+<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://zavoa.de/</loc></url><url><loc>https://zavoa.de/deals.html</loc></url><url><loc>https://zavoa.de/gutscheine.html</loc></url><url><loc>https://zavoa.de/so-funktionierts.html</loc></url><url><loc>https://zavoa.de/ueber-uns.html</loc></url><url><loc>https://zavoa.de/kontakt.html</loc></url><url><loc>https://zavoa.de/impressum.html</loc></url><url><loc>https://zavoa.de/datenschutz.html</loc></url><url><loc>https://zavoa.de/transparenz.html</loc></url></urlset>

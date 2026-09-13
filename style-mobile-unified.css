@@ -1,0 +1,316 @@
+
+:root{--n:#071a33;--g:#12b76a;--m:#607487;--l:#dfe8ec;--bg:#f6fafc}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--n)}a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}.nav{height:76px;display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--l)}
+.brand{text-decoration:none}.brand b{font-size:32px;color:var(--g);letter-spacing:-2px}.brand small{display:block;font-size:9px;color:var(--m)}
+.links{display:flex;gap:26px;font-weight:700;font-size:14px}.links a{text-decoration:none}.grow{flex:1}.btn{display:inline-block;padding:13px 18px;border-radius:11px;text-decoration:none;font-weight:800;border:0}.green{background:var(--g);color:#fff}.outline{border:1px solid var(--g);color:#087c4d}
+.hero{background:linear-gradient(110deg,#f5faff,#fff 55%,#eaf9f2);padding:58px 0}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+.kicker{font-size:12px;letter-spacing:1.8px;font-weight:900;color:#60788a;text-transform:uppercase}.hero h1{font-size:58px;line-height:1;letter-spacing:-2px;margin:12px 0 18px}.hero p{font-size:18px;line-height:1.5;color:#526779}
+.actions{display:flex;gap:10px;margin:25px 0}.checks{display:grid;gap:10px;color:#526779}.checks span:before{content:"✓";color:var(--g);font-weight:900;margin-right:8px}
+.visual{min-height:300px;border-radius:40px;background:radial-gradient(circle,#d8f7e8,transparent 68%);display:grid;place-items:center}.visualBox{background:#fff;border:1px solid var(--l);border-radius:20px;padding:28px;width:75%;box-shadow:0 15px 40px #10203015}.visualBox strong{font-size:25px}.visualBox .score{font-size:50px;color:var(--g);font-weight:900;margin:12px 0}
+.section{padding:48px 0}.head{display:flex;justify-content:space-between;align-items:end}.head h2{font-size:33px;margin:5px 0}.muted{color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}.card{border:1px solid var(--l);border-radius:17px;padding:15px}.pic{height:160px;border-radius:12px;background:#f3f6f7;display:grid;place-items:center;font-size:75px}.badge{display:inline-block;background:#dff7eb;color:#087c4d;padding:6px 8px;border-radius:999px;font-size:11px;font-weight:900;margin-top:12px}.card h3{margin:10px 0 6px}.price{font-size:27px;font-weight:900;color:var(--g)}.card .btn{width:100%;text-align:center;margin-top:12px}
+.coupons{background:#eefaf5}.couponGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.coupon{background:#fff;border:1px solid var(--l);border-radius:15px;padding:18px}.coupon h3{margin:0}.coupon strong{font-size:24px;display:block;margin:12px 0}.demo{font-size:11px;color:#8a651e;background:#fff6dd;padding:7px;border-radius:7px}
+.alert{background:var(--n);color:#fff;border-radius:19px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.alert h2{margin:0 0 8px}.form{display:flex;gap:8px}.form input{flex:1;padding:13px;border-radius:10px;border:0}
+.pagehero{background:var(--bg);padding:45px 0}.pagehero h1{font-size:45px;margin:0}.content{max-width:900px;margin:30px auto;padding:0 24px;line-height:1.6}
+footer{border-top:1px solid var(--l);padding:35px 0}.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footnav{display:grid;gap:8px}.footnav a{text-decoration:none}.copy{font-size:11px;color:#71818d;margin-top:28px}
+
+
+
+/* Controlled Design Update 1 — no structural/deployment changes */
+.visualBox{position:relative;overflow:hidden}
+.visualBox:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-45px;top:-45px;background:#e2f8ed}
+.visualBox strong,.visualBox .score,.visualBox .muted{position:relative;z-index:1}
+.card{transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #0b263815}
+.pic{font-family:"Apple Color Emoji","Segoe UI Emoji",sans-serif;background:linear-gradient(145deg,#f2f6f7,#fff);border:1px solid #edf1f2}
+.coupon{position:relative}.coupon:after{content:"Code anzeigen";display:block;margin-top:14px;padding:10px 12px;border-radius:9px;background:#12b76a;color:#fff;font-size:12px;font-weight:900;text-align:center}
+.alert{box-shadow:0 10px 28px #071a3315}
+
+.score-label{font-size:17px;font-weight:900;color:#087c4d;margin:-4px 0 10px}
+.score-scale{display:flex;justify-content:space-between;font-size:10px;color:#71818d;margin-top:18px}
+.score-bar{height:8px;background:#e5ecef;border-radius:99px;overflow:hidden;margin:4px 0 14px}
+.score-bar i{display:block;width:92%;height:100%;background:#12b76a;border-radius:99px}
+.score-link{font-size:13px;font-weight:800;color:#087c4d;text-decoration:none}
+
+
+/* =========================================================
+   ZAVOA – Mobile Optimierung
+   Nur für Smartphones bis 520px.
+   Desktop- und Tablet-Darstellung bleiben unverändert.
+   ========================================================= */
+
+
+/* =========================================================
+   ZAVOA – Mobile Fix 3
+   HTML + CSS abgestimmt. Desktop bleibt unverändert.
+   ========================================================= */
+.mobileScore{display:none}
+
+
+/* ZAVOA Mobile – ein einziger sauberer Smartphone-Block */
+
+
+/* ZAVOA Mobile – robuste Portrait-Version */
+
+
+/* =========================================================
+   ZAVOA – Einheitliche kompakte Handyansicht
+   Gilt für Hoch- UND Querformat bis 900px.
+   Dadurch sieht die Seite auf dem Handy in beiden
+   Ausrichtungen gleich kompakt aus.
+   ========================================================= */
+@media(max-width:900px){
+
+  .wrap{padding:0 16px}
+
+  /* Header */
+  .nav{
+    height:68px;
+    gap:14px;
+  }
+  .links{display:none}
+  .brand b{font-size:29px}
+  .brand small{font-size:8px}
+  .nav>.btn{
+    padding:10px 13px;
+    font-size:13px;
+  }
+
+  /* Hero bleibt in beiden Handy-Ausrichtungen kompakt */
+  .hero{padding:30px 0 26px}
+  .heroGrid{
+    display:block;
+  }
+  .kicker{
+    font-size:10px;
+    letter-spacing:1.4px;
+  }
+  .hero h1{
+    font-size:38px;
+    line-height:.98;
+    letter-spacing:-1.3px;
+    margin:9px 0 12px;
+  }
+  .hero p{
+    font-size:15px;
+    line-height:1.4;
+    margin:0;
+  }
+
+  .actions{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin:16px 0 14px;
+  }
+  .actions .btn{
+    width:100%;
+    text-align:center;
+    padding:11px 13px;
+  }
+  .checks{
+    gap:5px;
+    font-size:14px;
+  }
+
+  /* Score-Karte: bewusst klein und identisch in Portrait/Landscape */
+  .hero .visual{
+    display:block !important;
+    min-height:0 !important;
+    width:100% !important;
+    margin:14px 0 0 !important;
+    padding:0 !important;
+    background:none !important;
+    border-radius:0 !important;
+  }
+
+  .hero .visualBox{
+    display:block !important;
+    width:100% !important;
+    max-width:310px !important;
+    margin:0 auto !important;
+    padding:10px 12px !important;
+    border-radius:12px !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .hero .visualBox:after{
+    display:none !important;
+  }
+
+  .hero .visualBox strong{
+    display:block !important;
+    font-size:12px !important;
+    margin-bottom:2px !important;
+  }
+
+  .hero .visualBox .score{
+    display:inline-block !important;
+    font-size:21px !important;
+    line-height:1 !important;
+    margin:2px 5px 3px 0 !important;
+  }
+
+  .hero .score-label{
+    display:inline-block !important;
+    font-size:11px !important;
+    line-height:1.1 !important;
+    margin:0 !important;
+    color:#087c4d !important;
+  }
+
+  .hero .visualBox .muted{
+    display:block !important;
+    margin:4px 0 0 !important;
+    font-size:10px !important;
+    line-height:1.25 !important;
+  }
+
+  .hero .score-scale{
+    display:flex !important;
+    justify-content:space-between !important;
+    margin-top:8px !important;
+    font-size:8px !important;
+    color:#71818d !important;
+  }
+
+  .hero .score-bar{
+    display:block !important;
+    height:5px !important;
+    margin:3px 0 6px !important;
+    border-radius:99px !important;
+    background:#e5ecef !important;
+    overflow:hidden !important;
+  }
+
+  .hero .score-bar i{
+    display:block !important;
+    width:92% !important;
+    height:100% !important;
+    background:var(--g) !important;
+    border-radius:99px !important;
+  }
+
+  .hero .score-link{
+    display:inline-block !important;
+    margin-top:0 !important;
+    font-size:9.5px !important;
+  }
+
+  /* Frühere zusätzliche Mobile-Score-Box ausblenden */
+  .mobileScore{display:none !important}
+
+  /* Bereiche */
+  .section{padding:30px 0}
+  .head{
+    display:block !important;
+  }
+  .head h2{
+    font-size:28px;
+    line-height:1.04;
+    margin:4px 0 5px;
+  }
+  .head>a,
+  .head .sectionMore{
+    display:block !important;
+    width:max-content !important;
+    margin:7px 0 0 !important;
+    float:none !important;
+    position:static !important;
+    font-size:13px !important;
+  }
+
+  /* Deal-Karten */
+  .grid{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    margin-top:14px !important;
+  }
+  .card{
+    padding:10px !important;
+    border-radius:14px !important;
+  }
+  .pic{
+    height:96px !important;
+    font-size:43px !important;
+  }
+  .badge{
+    margin-top:6px !important;
+    font-size:9px !important;
+    padding:4px 6px !important;
+  }
+  .card h3{
+    font-size:19px !important;
+    margin:5px 0 2px !important;
+  }
+  .card .muted{
+    font-size:13px !important;
+  }
+  .price{
+    font-size:23px !important;
+  }
+  .card .btn{
+    margin-top:6px !important;
+    padding:10px 12px !important;
+  }
+
+  /* Gutscheine */
+  .couponGrid{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    margin-top:13px !important;
+  }
+  .coupon{
+    padding:12px !important;
+  }
+  .coupon h3{
+    font-size:18px !important;
+  }
+  .coupon strong{
+    font-size:20px !important;
+    margin:5px 0 !important;
+  }
+  .coupon:after{
+    margin-top:6px !important;
+    padding:8px 10px !important;
+  }
+
+  /* Deal Alert */
+  .alert{
+    grid-template-columns:1fr !important;
+    padding:18px 14px !important;
+    gap:12px !important;
+  }
+  .alert h2{
+    font-size:24px !important;
+    line-height:1.05 !important;
+  }
+  .form{
+    flex-direction:column !important;
+    gap:7px !important;
+  }
+  .form input,
+  .form .btn{
+    min-height:44px !important;
+  }
+
+  /* Footer */
+  footer{padding:24px 0 !important}
+  .foot{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:16px 12px !important;
+  }
+  .foot>div:first-child{
+    grid-column:1/-1 !important;
+  }
+  .footnav{
+    gap:5px !important;
+    font-size:13px !important;
+  }
+  .copy{
+    margin-top:14px !important;
+    font-size:9px !important;
+  }
+}

@@ -15,7 +15,7 @@
 .pagehero{background:var(--bg);padding:45px 0}.pagehero h1{font-size:45px;margin:0}.content{max-width:900px;margin:30px auto;padding:0 24px;line-height:1.6}
 footer{border-top:1px solid var(--l);padding:35px 0}.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footnav{display:grid;gap:8px}.footnav a{text-decoration:none}.copy{font-size:11px;color:#71818d;margin-top:28px}
 @media(max-width:850px){.links{display:none}.heroGrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.couponGrid,.alert{grid-template-columns:1fr}}
-@media(max-width:520px){.wrap{padding:0 14px}.hero h1{font-size:40px}.visual{display:none}.grid{grid-template-columns:1fr}.actions,.form{flex-direction:column}.foot{grid-template-columns:1fr}}
+@media(max-width:520px){.wrap{padding:0 14px}.hero{padding:34px 0}.hero h1{font-size:40px}.heroGrid{gap:24px}.visual{display:grid;min-height:0;border-radius:24px;padding:12px}.visualBox{width:100%;max-width:360px;padding:18px;border-radius:16px}.visualBox strong{font-size:20px}.visualBox .score{font-size:38px;margin:8px 0}.score-label{font-size:15px}.score-scale{margin-top:12px}.score-bar{margin-bottom:10px}.score-link{font-size:12px}.grid{grid-template-columns:1fr}.actions,.form{flex-direction:column}.foot{grid-template-columns:1fr}}
 
 /* Controlled Design Update 1 — no structural/deployment changes */
 .visualBox{position:relative;overflow:hidden}

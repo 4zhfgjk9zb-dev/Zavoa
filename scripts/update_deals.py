@@ -7,6 +7,25 @@ OUT="deals.json"
 HISTORY="price-history.json"
 MAX_DEALS=40
 MIN_MAIN_PRICE=100
+
+# Manually verified deals stay visible even when the feed has no comparison price.
+PINNED_DEALS=[{
+  "id":"anthbot-m5-verified",
+  "title":"ANTHBOT M5",
+  "subtitle":"Kabelloser Smart-Mähroboter",
+  "price":599,
+  "oldPrice":749,
+  "currency":"€",
+  "savings":150,
+  "discountPercent":20.0,
+  "image":"anthbot-m5-illustration.png",
+  "imageAlt":"Illustration des ANTHBOT M5 Mähroboters",
+  "imageNote":"Produktabbildung: Illustration",
+  "affiliateUrl":"https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3095153&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fm5-robot-lawn-mower%3Fvariant%3D52055426236729",
+  "active":True,
+  "merchant":"ANTHBOT DE",
+  "verified":True
+}]
 MIN_DROP_PERCENT=5
 
 def money(v):
@@ -66,6 +85,8 @@ for row in rows:
     })
 
 deals.sort(key=lambda d:(d["discountPercent"],d["savings"]),reverse=True)
+auto_ids={d["id"] for d in deals}
+deals=[d for d in PINNED_DEALS if d["id"] not in auto_ids]+deals
 with open(HISTORY,"w",encoding="utf-8") as f:
     json.dump(history,f,ensure_ascii=False,indent=2); f.write("\n")
 with open(OUT,"w",encoding="utf-8") as f:

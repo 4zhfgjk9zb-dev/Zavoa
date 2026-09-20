@@ -4,21 +4,16 @@ from datetime import datetime, timezone
 
 FEED_URL=os.environ["AWIN_ANTHBOT_FEED_URL"]
 OUT="deals.json"
+HISTORY="price-history.json"
 MAX_DEALS=40
 MIN_MAIN_PRICE=100
+MIN_DROP_PERCENT=5
 
 def money(v):
     if v is None: return None
     s=str(v).strip().replace("EUR","").replace("€","").strip().replace(",",".")
     try: return round(float(s),2)
     except: return None
-
-with urllib.request.urlopen(FEED_URL, timeout=60) as r:
-    raw=r.read()
-if raw[:2]==b"\x1f\x8b":
-    raw=gzip.decompress(raw)
-text=raw.decode("utf-8-sig",errors="replace")
-rows=list(csv.DictReader(io.StringIO(text)))
 
 def get(row,*names):
     low={k.lower():v for k,v in row.items()}
@@ -27,43 +22,52 @@ def get(row,*names):
         if v not in (None,""): return v.strip()
     return ""
 
+try:
+    with open(HISTORY,encoding="utf-8") as f: history=json.load(f)
+except (FileNotFoundError,json.JSONDecodeError):
+    history={"products":{}}
+
+with urllib.request.urlopen(FEED_URL, timeout=60) as r: raw=r.read()
+if raw[:2]==b"\x1f\x8b": raw=gzip.decompress(raw)
+rows=list(csv.DictReader(io.StringIO(raw.decode("utf-8-sig",errors="replace"))))
+now=datetime.now(timezone.utc).isoformat()
 deals=[]
+
 for row in rows:
     availability=get(row,"availability").lower()
     if availability and availability not in ("in_stock","in stock","instock"): continue
-    price=money(get(row,"price"))
-    if not price or price<=0: continue
+    regular=money(get(row,"price"))
+    sale=money(get(row,"sale_price"))
+    current=sale if sale and regular and 0<sale<regular else regular
+    if not current or current<MIN_MAIN_PRICE: continue
     title=get(row,"title","product_name","name")
     url=get(row,"aw_deep_link","deeplink","deep_link","merchant_deep_link","link")
     image=get(row,"image_link","merchant_image_url","image_url")
+    pid=get(row,"id","product_id","merchant_product_id") or title.lower().replace(" ","-")[:80]
     if not title or not url or not image: continue
-    sale=money(get(row,"sale_price"))
-    # A deal needs a real comparison price from the feed.
-    # Never invent a discount when sale_price is missing.
-    if not sale or sale <= 0 or sale >= price: continue
-    current=sale
-    old=price
-    saving=round(old-current,2)
-    # ZAVOA prioritises complete/main products; inexpensive accessories stay out for now.
-    if current < MIN_MAIN_PRICE: continue
+
+    h=history["products"].setdefault(pid,{"title":title,"prices":[]})
+    previous=[p["price"] for p in h.get("prices",[]) if p.get("price")]
+    historical=max(previous) if previous else None
+    h["title"]=title
+    h.setdefault("prices",[]).append({"at":now,"price":current})
+    h["prices"]=h["prices"][-120:]
+
+    comparison=regular if sale and regular and sale<regular else historical
+    if not comparison or current>=comparison: continue
+    saving=round(comparison-current,2)
+    drop=100*saving/comparison
+    if drop<MIN_DROP_PERCENT: continue
     deals.append({
-      "id": get(row,"id","product_id","merchant_product_id") or title.lower().replace(" ","-")[:80],
-      "title": title,
-      "subtitle": "ANTHBOT DE",
-      "price": current,
-      "oldPrice": old,
-      "currency": "€",
-      "savings": saving,
-      "image": image,
-      "imageAlt": title,
-      "affiliateUrl": url,
-      "active": True,
-      "merchant": "ANTHBOT DE"
+      "id":pid,"title":title,"subtitle":"ANTHBOT DE","price":current,
+      "oldPrice":comparison,"currency":"€","savings":saving,
+      "discountPercent":round(drop,1),"image":image,"imageAlt":title,
+      "affiliateUrl":url,"active":True,"merchant":"ANTHBOT DE"
     })
 
-deals.sort(key=lambda d: (d["savings"] or 0, d["price"]), reverse=True)
-payload={"updated":datetime.now(timezone.utc).isoformat(),"source":"AWIN ANTHBOT DE","deals":deals[:MAX_DEALS]}
+deals.sort(key=lambda d:(d["discountPercent"],d["savings"]),reverse=True)
+with open(HISTORY,"w",encoding="utf-8") as f:
+    json.dump(history,f,ensure_ascii=False,indent=2); f.write("\n")
 with open(OUT,"w",encoding="utf-8") as f:
-    json.dump(payload,f,ensure_ascii=False,indent=2)
-    f.write("\n")
-print(f"Wrote {len(payload['deals'])} active deals from {len(rows)} feed rows")
+    json.dump({"updated":now,"source":"AWIN ANTHBOT DE","deals":deals[:MAX_DEALS]},f,ensure_ascii=False,indent=2); f.write("\n")
+print(f"Tracked {len(history['products'])} products; published {len(deals[:MAX_DEALS])} verified price-drop deals")

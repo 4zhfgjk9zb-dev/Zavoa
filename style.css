@@ -31,3 +31,8 @@ footer{border-top:1px solid var(--l);padding:35px 0}.foot{display:grid;grid-temp
 .score-bar{height:8px;background:#e5ecef;border-radius:99px;overflow:hidden;margin:4px 0 14px}
 .score-bar i{display:block;width:92%;height:100%;background:#12b76a;border-radius:99px}
 .score-link{font-size:13px;font-weight:800;color:#087c4d;text-decoration:none}
+
+/* Product deal images */
+.product-pic{overflow:hidden;padding:8px;background:#fff}
+.product-pic img{width:100%;height:100%;object-fit:contain;display:block}
+.image-note{font-size:10px;color:#71818d;margin:5px 2px 0}

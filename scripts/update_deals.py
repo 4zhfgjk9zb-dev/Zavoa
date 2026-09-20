@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 FEED_URL=os.environ["AWIN_ANTHBOT_FEED_URL"]
 OUT="deals.json"
 MAX_DEALS=40
+MIN_MAIN_PRICE=100
 
 def money(v):
     if v is None: return None
@@ -40,6 +41,8 @@ for row in rows:
     current=sale if sale and sale>0 else price
     old=price if sale and sale<price else None
     saving=round(old-current,2) if old else None
+    # ZAVOA prioritises complete/main products; inexpensive accessories stay out for now.
+    if current < MIN_MAIN_PRICE: continue
     deals.append({
       "id": get(row,"id","product_id","merchant_product_id") or title.lower().replace(" ","-")[:80],
       "title": title,
@@ -55,7 +58,7 @@ for row in rows:
       "merchant": "ANTHBOT DE"
     })
 
-deals.sort(key=lambda d: (d["savings"] or 0, -d["price"]), reverse=True)
+deals.sort(key=lambda d: (d["savings"] or 0, d["price"]), reverse=True)
 payload={"updated":datetime.now(timezone.utc).isoformat(),"source":"AWIN ANTHBOT DE","deals":deals[:MAX_DEALS]}
 with open(OUT,"w",encoding="utf-8") as f:
     json.dump(payload,f,ensure_ascii=False,indent=2)

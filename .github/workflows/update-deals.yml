@@ -1,0 +1,33 @@
+name: Update AWIN deals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-deals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Import ANTHBOT feed
+        env:
+          AWIN_ANTHBOT_FEED_URL: ${{ secrets.AWIN_ANTHBOT_FEED_URL }}
+        run: python scripts/update_deals.py
+      - name: Commit changed deal data
+        run: |
+          if git diff --quiet -- deals.json; then
+            echo "No deal changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deals.json
+          git commit -m "Update AWIN deals"
+          git push

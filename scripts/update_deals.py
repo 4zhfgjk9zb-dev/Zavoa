@@ -70,7 +70,8 @@ for row in rows:
     regular=money(get(row,"price","search_price"))
     sale=money(get(row,"sale_price"))
     current=sale if sale and regular and 0<sale<regular else regular
-    if not current or current<MIN_MAIN_PRICE: continue
+    min_price = 5 if merchant=="Glamory" else MIN_MAIN_PRICE
+    if not current or current<min_price: continue
     title=get(row,"title","product_name","name")
     url=get(row,"aw_deep_link","deeplink","deep_link","merchant_deep_link","link")
     image=get(row,"image_link","merchant_image_url","image_url","aw_image_url")

@@ -38,9 +38,12 @@ for row in rows:
     image=get(row,"image_link","merchant_image_url","image_url")
     if not title or not url or not image: continue
     sale=money(get(row,"sale_price"))
-    current=sale if sale and sale>0 else price
-    old=price if sale and sale<price else None
-    saving=round(old-current,2) if old else None
+    # A deal needs a real comparison price from the feed.
+    # Never invent a discount when sale_price is missing.
+    if not sale or sale <= 0 or sale >= price: continue
+    current=sale
+    old=price
+    saving=round(old-current,2)
     # ZAVOA prioritises complete/main products; inexpensive accessories stay out for now.
     if current < MIN_MAIN_PRICE: continue
     deals.append({

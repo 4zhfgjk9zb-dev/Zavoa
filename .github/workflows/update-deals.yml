@@ -21,6 +21,7 @@ jobs:
           AWIN_ANTHBOT_FEED_URL: ${{ secrets.AWIN_ANTHBOT_FEED_URL }}
           AWIN_OUTIN_FEED_URL: ${{ secrets.AWIN_OUTIN_FEED_URL }}
           AWIN_BLITEC_FEED_URL: ${{ secrets.AWIN_BLITEC_FEED_URL }}
+          AWIN_GLAMORY_FEED_URL: ${{ secrets.AWIN_GLAMORY_FEED_URL }}
         run: python scripts/update_deals.py
       - name: Commit changed deal data
         run: |

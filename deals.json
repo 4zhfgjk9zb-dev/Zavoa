@@ -1,5 +1,23 @@
 {
-  "updated": "2026-09-20T11:46:34.793905+00:00",
+  "updated": "2026-09-20T12:11:31.412947+00:00",
   "source": "AWIN ANTHBOT DE",
-  "deals": []
+  "deals": [
+    {
+      "id": "anthbot-m5-verified",
+      "title": "ANTHBOT M5",
+      "subtitle": "Kabelloser Smart-Mähroboter",
+      "price": 599,
+      "oldPrice": 749,
+      "currency": "€",
+      "savings": 150,
+      "discountPercent": 20.0,
+      "image": "anthbot-m5-illustration.png",
+      "imageAlt": "Illustration des ANTHBOT M5 Mähroboters",
+      "imageNote": "Produktabbildung: Illustration",
+      "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3095153&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fm5-robot-lawn-mower%3Fvariant%3D52055426236729",
+      "active": true,
+      "merchant": "ANTHBOT DE",
+      "verified": true
+    }
+  ]
 }

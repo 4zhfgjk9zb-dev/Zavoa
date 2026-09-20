@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 FEEDS=[
     ("ANTHBOT DE", os.environ["AWIN_ANTHBOT_FEED_URL"]),
     ("OutIn Germany", os.environ["AWIN_OUTIN_FEED_URL"]),
+    ("Blitec DE", os.environ["AWIN_BLITEC_FEED_URL"]),
 ]
 OUT="deals.json"
 HISTORY="price-history.json"
@@ -101,5 +102,5 @@ deals=[d for d in PINNED_DEALS if d["id"] not in auto_ids]+deals
 with open(HISTORY,"w",encoding="utf-8") as f:
     json.dump(history,f,ensure_ascii=False,indent=2); f.write("\n")
 with open(OUT,"w",encoding="utf-8") as f:
-    json.dump({"updated":now,"source":"AWIN ANTHBOT DE + OutIn Germany","deals":deals[:MAX_DEALS]},f,ensure_ascii=False,indent=2); f.write("\n")
+    json.dump({"updated":now,"source":"AWIN ANTHBOT DE + OutIn Germany + Blitec DE","deals":deals[:MAX_DEALS]},f,ensure_ascii=False,indent=2); f.write("\n")
 print(f"Tracked {len(history['products'])} products; published {len(deals[:MAX_DEALS])} verified price-drop deals")

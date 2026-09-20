@@ -26,7 +26,7 @@ PINNED_DEALS=[{
   "imageNote":"Produktabbildung: Illustration",
   "affiliateUrl":"https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3095153&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fm5-robot-lawn-mower%3Fvariant%3D52055426236729",
   "active":True,
-  "merchant":merchant,
+  "merchant":"ANTHBOT DE",
   "verified":True
 }]
 MIN_DROP_PERCENT=5
@@ -92,7 +92,7 @@ for row in rows:
       "id":pid,"title":title,"subtitle":merchant,"price":current,
       "oldPrice":comparison,"currency":"€","savings":saving,
       "discountPercent":round(drop,1),"image":image,"imageAlt":title,
-      "affiliateUrl":url,"active":True,"merchant":"ANTHBOT DE"
+      "affiliateUrl":url,"active":True,"merchant":merchant
     })
 
 deals.sort(key=lambda d:(d["discountPercent"],d["savings"]),reverse=True)

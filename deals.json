@@ -1,0 +1,19 @@
+{
+  "updated": "2026-09-20",
+  "deals": [
+    {
+      "id": "anthbot-m5",
+      "title": "ANTHBOT M5",
+      "subtitle": "Kabelloser Smart-Mähroboter",
+      "price": 599,
+      "oldPrice": 749,
+      "currency": "€",
+      "savings": 150,
+      "image": "anthbot-m5-illustration.png",
+      "imageAlt": "Illustration des ANTHBOT M5 Mähroboters",
+      "imageNote": "Produktabbildung: Illustration",
+      "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3095153&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fm5-robot-lawn-mower%3Fvariant%3D52055426236729",
+      "active": true
+    }
+  ]
+}

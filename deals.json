@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T06:31:48.430454+00:00",
+  "updated": "2026-09-22T12:31:47.580804+00:00",
   "source": "AWIN ANTHBOT DE + OutIn Germany + Blitec DE + Glamory",
   "deals": [
     {
@@ -18,6 +18,51 @@
       "active": true,
       "merchant": "ANTHBOT DE",
       "verified": true
+    },
+    {
+      "id": "blitec-de-30721681315",
+      "title": "DYMO Etikettendrucker , LabelWriter 5XL,",
+      "subtitle": "Blitec DE",
+      "price": 163.03,
+      "oldPrice": 202.3,
+      "currency": "€",
+      "savings": 39.27,
+      "discountPercent": 19.4,
+      "image": "https://www.blitec.de/images/product_images/original_images/602865_0.jpg",
+      "imageAlt": "DYMO Etikettendrucker , LabelWriter 5XL,",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=30721681315&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-24518787171",
+      "title": "DYMO Industrie-Beschriftungsgerät , RHINO 5200, , im Koffer",
+      "subtitle": "Blitec DE",
+      "price": 230.86,
+      "oldPrice": 284.41,
+      "currency": "€",
+      "savings": 53.55,
+      "discountPercent": 18.8,
+      "image": "https://www.blitec.de/images/product_images/original_images/120356_0.jpg",
+      "imageAlt": "DYMO Industrie-Beschriftungsgerät , RHINO 5200, , im Koffer",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518787171&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-30864814863",
+      "title": "DYMO Etikettendrucker , LabelWriter 550,",
+      "subtitle": "Blitec DE",
+      "price": 103.05,
+      "oldPrice": 126.14,
+      "currency": "€",
+      "savings": 23.09,
+      "discountPercent": 18.3,
+      "image": "https://www.blitec.de/images/product_images/original_images/603189_0.jpg",
+      "imageAlt": "DYMO Etikettendrucker , LabelWriter 550,",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=30864814863&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
     }
   ]
 }

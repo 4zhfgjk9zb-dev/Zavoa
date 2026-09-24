@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T06:32:31.576250+00:00",
+  "updated": "2026-09-24T12:32:42.391237+00:00",
   "source": "AWIN ANTHBOT DE + OutIn Germany + Blitec DE + Glamory",
   "deals": [
     {
@@ -140,21 +140,6 @@
       "merchant": "Blitec DE"
     },
     {
-      "id": "blitec-de-25941898515",
-      "title": "brother Toner für brother HL-L3210/L3210CW, schwarz",
-      "subtitle": "Blitec DE",
-      "price": 108.48,
-      "oldPrice": 11899.99,
-      "currency": "€",
-      "savings": 11791.51,
-      "discountPercent": 99.1,
-      "image": "https://www.blitec.de/images/product_images/original_images/",
-      "imageAlt": "brother Toner für brother HL-L3210/L3210CW, schwarz",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=25941898515&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
       "id": "blitec-de-34087057563",
       "title": "EXACOMPTA Aktendeckel SUPER 210 Contact, DIN A4, hellgrün",
       "subtitle": "Blitec DE",
@@ -211,6 +196,21 @@
       "image": "https://www.blitec.de/images/product_images/original_images/75126_0.jpg",
       "imageAlt": "nobo Flipchart Basic Melamin, nicht magnethaftend",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518744645&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-25941898515",
+      "title": "brother Toner für brother HL-L3210/L3210CW, schwarz",
+      "subtitle": "Blitec DE",
+      "price": 110.62,
+      "oldPrice": 11899.99,
+      "currency": "€",
+      "savings": 11789.37,
+      "discountPercent": 99.1,
+      "image": "https://www.blitec.de/images/product_images/original_images/",
+      "imageAlt": "brother Toner für brother HL-L3210/L3210CW, schwarz",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=25941898515&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     },

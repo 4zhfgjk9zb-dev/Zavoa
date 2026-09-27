@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T06:32:10.552279+00:00",
+  "updated": "2026-09-27T12:31:18.797949+00:00",
   "source": "AWIN ANTHBOT DE + OutIn Germany + Blitec DE + Glamory",
   "deals": [
     {
@@ -500,21 +500,6 @@
       "merchant": "Blitec DE"
     },
     {
-      "id": "blitec-de-28346474225",
-      "title": "POSCA Pigmentmarker PC-1MC, 72er Display",
-      "subtitle": "Blitec DE",
-      "price": 135.66,
-      "oldPrice": 11899.99,
-      "currency": "€",
-      "savings": 11764.33,
-      "discountPercent": 98.9,
-      "image": "https://www.blitec.de/images/product_images/original_images/594504_0.jpg",
-      "imageAlt": "POSCA Pigmentmarker PC-1MC, 72er Display",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=28346474225&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
       "id": "blitec-de-25566483393",
       "title": "Rubbermaid Tret-Abfalleimer Slim Jim, 50 Liter, rot",
       "subtitle": "Blitec DE",
@@ -526,6 +511,21 @@
       "image": "https://www.blitec.de/images/product_images/original_images/343194_0.jpg",
       "imageAlt": "Rubbermaid Tret-Abfalleimer Slim Jim, 50 Liter, rot",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=25566483393&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-28346474225",
+      "title": "POSCA Pigmentmarker PC-1MC, 72er Display",
+      "subtitle": "Blitec DE",
+      "price": 135.66,
+      "oldPrice": 11899.99,
+      "currency": "€",
+      "savings": 11764.33,
+      "discountPercent": 98.9,
+      "image": "https://www.blitec.de/images/product_images/original_images/594504_0.jpg",
+      "imageAlt": "POSCA Pigmentmarker PC-1MC, 72er Display",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=28346474225&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     },

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T06:35:43.970432+00:00",
+  "updated": "2026-10-03T15:06:17.772402+00:00",
   "source": "AWIN ANTHBOT DE + OutIn Germany + Blitec DE + Glamory",
   "deals": [
     {
@@ -350,21 +350,6 @@
       "merchant": "Blitec DE"
     },
     {
-      "id": "blitec-de-24518726045",
-      "title": "AVERY Zweckform Typenschild-Etiketten, 45,7 x 21,2mm, silber",
-      "subtitle": "Blitec DE",
-      "price": 121.38,
-      "oldPrice": 11899.99,
-      "currency": "€",
-      "savings": 11778.61,
-      "discountPercent": 99.0,
-      "image": "https://www.blitec.de/images/product_images/original_images/59580_0.jpg",
-      "imageAlt": "AVERY Zweckform Typenschild-Etiketten, 45,7 x 21,2mm, silber",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518726045&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
       "id": "blitec-de-36557706622",
       "title": "dm-Folien LDPE-Abdeckfolie, 150 my, transparent, 4 x 50 m",
       "subtitle": "Blitec DE",
@@ -436,6 +421,21 @@
       "image": "https://www.blitec.de/images/product_images/original_images/58594_0.jpg",
       "imageAlt": "AVERY Zweckform wetterfeste Etiketten, 210 x 297 mm",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518725401&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-24518726045",
+      "title": "AVERY Zweckform Typenschild-Etiketten, 45,7 x 21,2mm, silber",
+      "subtitle": "Blitec DE",
+      "price": 127.33,
+      "oldPrice": 11899.99,
+      "currency": "€",
+      "savings": 11772.66,
+      "discountPercent": 98.9,
+      "image": "https://www.blitec.de/images/product_images/original_images/59580_0.jpg",
+      "imageAlt": "AVERY Zweckform Typenschild-Etiketten, 45,7 x 21,2mm, silber",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518726045&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     },

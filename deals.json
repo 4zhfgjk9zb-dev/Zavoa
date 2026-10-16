@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T04:31:25.302455+00:00",
+  "updated": "2026-10-16T11:23:43.495028+00:00",
   "source": "AWIN ANTHBOT DE + OutIn Germany + Blitec DE + Glamory",
   "deals": [
     {
@@ -140,6 +140,21 @@
       "merchant": "Blitec DE"
     },
     {
+      "id": "blitec-de-25941898515",
+      "title": "brother Toner für brother HL-L3210/L3210CW, schwarz",
+      "subtitle": "Blitec DE",
+      "price": 109.49,
+      "oldPrice": 11899.99,
+      "currency": "€",
+      "savings": 11790.5,
+      "discountPercent": 99.1,
+      "image": "https://www.blitec.de/images/product_images/original_images/",
+      "imageAlt": "brother Toner für brother HL-L3210/L3210CW, schwarz",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=25941898515&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
       "id": "blitec-de-34087057563",
       "title": "EXACOMPTA Aktendeckel SUPER 210 Contact, DIN A4, hellgrün",
       "subtitle": "Blitec DE",
@@ -196,21 +211,6 @@
       "image": "https://www.blitec.de/images/product_images/original_images/75126_0.jpg",
       "imageAlt": "nobo Flipchart Basic Melamin, nicht magnethaftend",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518744645&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
-      "id": "blitec-de-25941898515",
-      "title": "brother Toner für brother HL-L3210/L3210CW, schwarz",
-      "subtitle": "Blitec DE",
-      "price": 110.62,
-      "oldPrice": 11899.99,
-      "currency": "€",
-      "savings": 11789.37,
-      "discountPercent": 99.1,
-      "image": "https://www.blitec.de/images/product_images/original_images/",
-      "imageAlt": "brother Toner für brother HL-L3210/L3210CW, schwarz",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=25941898515&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     },
@@ -470,21 +470,6 @@
       "merchant": "Blitec DE"
     },
     {
-      "id": "blitec-de-24518762363",
-      "title": "brother Toner für brother HL-L8260CDW, XL, schwarz",
-      "subtitle": "Blitec DE",
-      "price": 131.19,
-      "oldPrice": 11899.99,
-      "currency": "€",
-      "savings": 11768.8,
-      "discountPercent": 98.9,
-      "image": "https://www.blitec.de/images/product_images/original_images/original-toner-f-r-brother-hl-l8260cdw-92228.jpg",
-      "imageAlt": "brother Toner für brother HL-L8260CDW, XL, schwarz",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518762363&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
       "id": "blitec-de-44791032155",
       "title": "shiverpeaks USB 3.2 Optisches Kabel, USB-A - USB-C, 25,0 m",
       "subtitle": "Blitec DE",
@@ -496,6 +481,21 @@
       "image": "https://www.blitec.de/images/product_images/original_images/647751_0.jpg",
       "imageAlt": "shiverpeaks USB 3.2 Optisches Kabel, USB-A - USB-C, 25,0 m",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44791032155&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-24518762363",
+      "title": "brother Toner für brother HL-L8260CDW, XL, schwarz",
+      "subtitle": "Blitec DE",
+      "price": 133.71,
+      "oldPrice": 11899.99,
+      "currency": "€",
+      "savings": 11766.28,
+      "discountPercent": 98.9,
+      "image": "https://www.blitec.de/images/product_images/original_images/original-toner-f-r-brother-hl-l8260cdw-92228.jpg",
+      "imageAlt": "brother Toner für brother HL-L8260CDW, XL, schwarz",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518762363&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     },

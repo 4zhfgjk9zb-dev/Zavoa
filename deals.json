@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T05:41:58.743488+00:00",
+  "updated": "2026-10-28T12:54:12.978316+00:00",
   "source": "AWIN ANTHBOT DE + OutIn Germany + Blitec DE + Glamory",
   "deals": [
     {
@@ -61,6 +61,21 @@
       "image": "https://www.blitec.de/images/product_images/original_images/353665_0.jpg",
       "imageAlt": "LogiLink 19,  LCD KVM Konsole mit 48,26 cm (19, ) TFT-Monitor",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=25578284381&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-44905770494",
+      "title": "Restposten: CEDERROTH Erste-Hilfe-Station, bestückt",
+      "subtitle": "Blitec DE",
+      "price": 124.88,
+      "oldPrice": 158.94,
+      "currency": "€",
+      "savings": 34.06,
+      "discountPercent": 21.4,
+      "image": "https://www.blitec.de/images/product_images/original_images/648008_0.jpg",
+      "imageAlt": "Restposten: CEDERROTH Erste-Hilfe-Station, bestückt",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44905770494&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     },
@@ -136,6 +151,36 @@
       "image": "https://www.blitec.de/images/product_images/original_images/45807_0.jpg",
       "imageAlt": "FRANKEN Moderationskoffer KOMPAKT, 2.100 Teile, Aluminium",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=24518710359&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-44945419803",
+      "title": "Restposten: Wonday Stahl-Plattformwagen Professional Plus,",
+      "subtitle": "Blitec DE",
+      "price": 105.83,
+      "oldPrice": 123.49,
+      "currency": "€",
+      "savings": 17.66,
+      "discountPercent": 14.3,
+      "image": "https://www.blitec.de/images/product_images/original_images/648166_0.jpg",
+      "imageAlt": "Restposten: Wonday Stahl-Plattformwagen Professional Plus,",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44945419803&a=3095153&m=15079",
+      "active": true,
+      "merchant": "Blitec DE"
+    },
+    {
+      "id": "blitec-de-44945419804",
+      "title": "Restposten: Wonday Stahl-Plattformwagen Professional Plus,",
+      "subtitle": "Blitec DE",
+      "price": 108.48,
+      "oldPrice": 126.14,
+      "currency": "€",
+      "savings": 17.66,
+      "discountPercent": 14.0,
+      "image": "https://www.blitec.de/images/product_images/original_images/648167_0.jpg",
+      "imageAlt": "Restposten: Wonday Stahl-Plattformwagen Professional Plus,",
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44945419804&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     },
@@ -556,51 +601,6 @@
       "image": "https://www.blitec.de/images/product_images/original_images/336538_0.jpg",
       "imageAlt": "FRANKEN Stativdrehtafel U-Act! Line, 2.000 x 1.000 mm",
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=25541536559&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
-      "id": "blitec-de-25541536567",
-      "title": "FRANKEN Stativdrehtafel, 2.200 x 1.200 mm",
-      "subtitle": "Blitec DE",
-      "price": 374.85,
-      "oldPrice": 403.41,
-      "currency": "€",
-      "savings": 28.56,
-      "discountPercent": 7.1,
-      "image": "https://www.blitec.de/images/product_images/original_images/336546_0.jpg",
-      "imageAlt": "FRANKEN Stativdrehtafel, 2.200 x 1.200 mm",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=25541536567&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
-      "id": "blitec-de-25547112485",
-      "title": "FRANKEN Stativdrehtafel, emailliert, 1.500 x 1.000 mm",
-      "subtitle": "Blitec DE",
-      "price": 376.04,
-      "oldPrice": 404.6,
-      "currency": "€",
-      "savings": 28.56,
-      "discountPercent": 7.1,
-      "image": "https://www.blitec.de/images/product_images/original_images/337497_0.jpg",
-      "imageAlt": "FRANKEN Stativdrehtafel, emailliert, 1.500 x 1.000 mm",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=25547112485&a=3095153&m=15079",
-      "active": true,
-      "merchant": "Blitec DE"
-    },
-    {
-      "id": "blitec-de-25547112487",
-      "title": "FRANKEN Stativdrehtafel, 1.500 x 1.000 mm",
-      "subtitle": "Blitec DE",
-      "price": 233.24,
-      "oldPrice": 251.09,
-      "currency": "€",
-      "savings": 17.85,
-      "discountPercent": 7.1,
-      "image": "https://www.blitec.de/images/product_images/original_images/337498_0.jpg",
-      "imageAlt": "FRANKEN Stativdrehtafel, 1.500 x 1.000 mm",
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=25547112487&a=3095153&m=15079",
       "active": true,
       "merchant": "Blitec DE"
     }
